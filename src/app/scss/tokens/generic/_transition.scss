@@ -4,6 +4,7 @@ $default-transition: ease-in-out;
 @mixin transition {
   transition: $default-time $default-transition all;
 }
+
 @mixin transitionIn($property) {
   transition: $default-time $default-transition $property;
 }

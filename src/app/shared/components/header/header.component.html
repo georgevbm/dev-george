@@ -1,1 +1,21 @@
-<p>header works!</p>
+<nav>
+  <section id="header">
+    <button
+      id="menu-button"
+      class="p-8px ml-8px"
+      title="Botão abrir/fechar menu"
+      (click)="toggleMenu()"
+    >
+      <ng-icon name="bootstrapList"></ng-icon>
+    </button>
+  </section>
+
+  <section id="menu" [ngClass]="{ opened: opened }">
+    <ul id="links">
+      <li><a class="p-1rem" href="/home">Home</a></li>
+      <li><a class="p-1rem" href="/skills">Habilidades</a></li>
+      <li><a class="p-1rem" href="/projects">Projetos</a></li>
+      <li><a class="p-1rem" href="/contact">Contato</a></li>
+    </ul>
+  </section>
+</nav>
