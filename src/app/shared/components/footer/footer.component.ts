@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import {
   bootstrapEnvelopeAtFill,
   bootstrapGithub,
+  bootstrapLinkedin,
   bootstrapWhatsapp,
 } from '@ng-icons/bootstrap-icons';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
@@ -19,6 +20,7 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
       bootstrapEnvelopeAtFill,
       bootstrapGithub,
       bootstrapWhatsapp,
+      bootstrapLinkedin,
     }),
   ],
 })
@@ -35,6 +37,13 @@ export class FooterComponent {
 
   goToGithub() {
     window.open('https://github.com/georgevbm', '_blank');
+  }
+
+  goToLinkedIn() {
+    window.open(
+      'https://www.linkedin.com/in/george-victor-branco-mota/',
+      '_blank'
+    );
   }
 
   goToContact() {
