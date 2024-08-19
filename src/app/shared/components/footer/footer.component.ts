@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   bootstrapEnvelopeAtFill,
   bootstrapGithub,
@@ -20,4 +21,18 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
     }),
   ],
 })
-export class FooterComponent {}
+export class FooterComponent {
+  constructor(private router: Router) {}
+
+  goToWhatsApp() {
+    window.open('https://w.app/devgeorge', '_blank');
+  }
+
+  goToGithub() {
+    window.open('https://github.com/georgevbm', '_blank');
+  }
+
+  goToContact() {
+    this.router.navigateByUrl('/contact');
+  }
+}
