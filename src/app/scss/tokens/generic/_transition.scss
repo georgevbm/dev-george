@@ -8,3 +8,7 @@ $default-transition: ease-in-out;
 @mixin transitionIn($property) {
   transition: $default-time $default-transition $property;
 }
+
+@mixin transitionMenu {
+  transition: opacity $default-time, transform $default-time;
+}
