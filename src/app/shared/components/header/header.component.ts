@@ -15,8 +15,6 @@ export class HeaderComponent {
   opened = false;
 
   toggleMenu() {
-    console.log('Alterou o menu');
-
     this.opened = !this.opened;
   }
 }
