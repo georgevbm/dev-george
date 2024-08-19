@@ -37,10 +37,18 @@
       cursor: pointer;
       color: $color-white !important;
     }
+
+    &-invisible {
+      display: none;
+    }
   }
 
   .buttons-right {
     display: flex;
     gap: 8px;
   }
+}
+
+.without-button-email {
+  justify-content: flex-end !important;
 }

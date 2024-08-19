@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import {
@@ -10,7 +11,7 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [NgIconComponent],
+  imports: [CommonModule, NgIconComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
   viewProviders: [
@@ -22,6 +23,10 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
   ],
 })
 export class FooterComponent {
+  get showButtonEmail() {
+    return this.router.url !== '/contact';
+  }
+
   constructor(private router: Router) {}
 
   goToWhatsApp() {
