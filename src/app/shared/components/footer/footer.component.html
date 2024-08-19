@@ -1,32 +1,38 @@
 <footer
   id="footer"
   class="pl-1rem pr-1rem pb-1rem"
-  [ngClass]="{ 'without-button-email': !showButtonEmail }"
->
+  [ngClass]="{ 'without-button-email': !showButtonEmail }">
   @if (showButtonEmail) {
-  <div class="button-email" (click)="goToContact()">
-    <ng-icon class="icon-email" name="bootstrapEnvelopeAtFill"></ng-icon>
-    <span class="ml-8px mt-5px">E-mail</span>
-  </div>
+    <div
+      class="button-email"
+      tabindex="0"
+      (click)="goToContact()"
+      (keyup)="goToContact()">
+      <ng-icon class="icon-email" name="bootstrapEnvelopeAtFill"></ng-icon>
+      <span class="ml-8px mt-5px">E-mail</span>
+    </div>
   }
 
   <div class="buttons-right">
     <ng-icon
       class="icon"
       name="bootstrapGithub"
+      tabindex="0"
       (click)="goToGithub()"
-    ></ng-icon>
+      (keyup)="goToGithub()"></ng-icon>
 
     <ng-icon
       class="icon"
       name="bootstrapLinkedin"
+      tabindex="0"
       (click)="goToLinkedIn()"
-    ></ng-icon>
+      (keyup)="goToLinkedIn()"></ng-icon>
 
     <ng-icon
       class="icon"
       name="bootstrapWhatsapp"
+      tabindex="0"
       (click)="goToWhatsApp()"
-    ></ng-icon>
+      (keyup)="goToWhatsApp()"></ng-icon>
   </div>
 </footer>

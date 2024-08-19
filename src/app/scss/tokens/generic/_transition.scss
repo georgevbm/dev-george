@@ -10,5 +10,7 @@ $default-transition: ease-in-out;
 }
 
 @mixin transitionMenu {
-  transition: opacity $default-time, transform $default-time;
+  transition:
+    opacity $default-time,
+    transform $default-time;
 }
