@@ -8,13 +8,39 @@
   background-color: $color-black;
 
   #menu-button {
+    display: flex;
+    align-items: center;
     background-color: transparent;
     margin-top: 1%;
-    font-size: $font-size-h3;
+    font-size: $font-size-h2;
     color: $color-white;
     border: none;
     border-radius: 4px;
     @include transition;
+
+    .icon-close {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      @include transition;
+
+      &-opened {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .icon-menu {
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      @include transition;
+
+      &-opened {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
   }
 
   #menu-button:hover {

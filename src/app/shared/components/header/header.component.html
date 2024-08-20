@@ -5,7 +5,15 @@
       class="p-8px ml-8px"
       title="Botão abrir/fechar menu"
       (click)="toggleMenu()">
-      <ng-icon name="bootstrapList"></ng-icon>
+      <ng-icon
+        class="icon-close"
+        name="bootstrapX"
+        [ngClass]="{ 'icon-close-opened': opened }"></ng-icon>
+
+      <ng-icon
+        class="icon-menu"
+        name="bootstrapList"
+        [ngClass]="{ 'icon-menu-opened': opened }"></ng-icon>
     </button>
   </section>
 
