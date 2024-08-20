@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
+import { axe } from 'jest-axe';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -18,5 +19,12 @@ describe('HeaderComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have no accessibility violations', async () => {
+    fixture.detectChanges();
+    const results = await axe(fixture.nativeElement);
+
+    expect(results).toHaveNoViolations();
   });
 });

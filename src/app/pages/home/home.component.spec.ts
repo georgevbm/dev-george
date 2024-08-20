@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
+import { axe } from 'jest-axe';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -18,5 +19,12 @@ describe('HomeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have no accessibility violations', async () => {
+    fixture.detectChanges();
+    const results = await axe(fixture.nativeElement);
+
+    expect(results).toHaveNoViolations();
   });
 });
