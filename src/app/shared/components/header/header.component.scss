@@ -32,12 +32,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 99;
   background: $color-black;
+  visibility: hidden;
   opacity: 0;
   @include transitionMenu;
 
   &.opened {
+    visibility: visible;
     opacity: 1;
   }
 
