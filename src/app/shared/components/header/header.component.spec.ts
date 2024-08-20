@@ -27,4 +27,16 @@ describe('HeaderComponent', () => {
 
     expect(results).toHaveNoViolations();
   });
+
+  it('should call toggleMenu and close menu', () => {
+    component.opened = true;
+    component.toggleMenu();
+    expect(component.opened).toBeFalsy();
+  });
+
+  it('should call toggleMenu and open menu', () => {
+    component.opened = false;
+    component.toggleMenu();
+    expect(component.opened).toBeTruthy();
+  });
 });
