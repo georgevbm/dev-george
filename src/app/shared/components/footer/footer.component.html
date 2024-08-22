@@ -7,7 +7,7 @@
       class="button-email"
       tabindex="0"
       (click)="goToContact()"
-      (keyup)="goToContact()">
+      (keyup.enter)="goToContact()">
       <ng-icon class="icon-email" name="bootstrapEnvelopeAtFill"></ng-icon>
       <span class="ml-8px mt-5px">E-mail</span>
     </div>
@@ -19,20 +19,20 @@
       name="bootstrapGithub"
       tabindex="0"
       (click)="goToGithub()"
-      (keyup)="goToGithub()"></ng-icon>
+      (keyup.enter)="goToGithub()"></ng-icon>
 
     <ng-icon
       class="icon"
       name="bootstrapLinkedin"
       tabindex="0"
       (click)="goToLinkedIn()"
-      (keyup)="goToLinkedIn()"></ng-icon>
+      (keyup.enter)="goToLinkedIn()"></ng-icon>
 
     <ng-icon
       class="icon"
       name="bootstrapWhatsapp"
       tabindex="0"
       (click)="goToWhatsApp()"
-      (keyup)="goToWhatsApp()"></ng-icon>
+      (keyup.enter)="goToWhatsApp()"></ng-icon>
   </div>
 </footer>
