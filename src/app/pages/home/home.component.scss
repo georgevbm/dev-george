@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    .hello-world {
+    .first-text {
       font-weight: 200;
       font-size: $font-size-body-m;
     }
@@ -47,9 +47,10 @@
           right: -5px;
           animation:
             cursor 0.8s infinite,
-            type 20s steps(15) infinite;
+            type 20s steps(10) infinite;
           width: calc(100% + 5px);
           background-color: $color-black;
+          z-index: 2;
         }
       }
 
@@ -89,27 +90,27 @@
       @keyframes words {
         0%,
         20% {
-          content: 'front-end em Angular.';
+          content: 'Angular Framework.';
         }
 
         21%,
         40% {
-          content: 'testes com Jest.';
+          content: 'teste com Jest.';
         }
 
         41%,
         60% {
-          content: 'sites com HTML e CSS.';
+          content: 'HTML e CSS.';
         }
 
         61%,
         80% {
-          content: 'automação com Playwright.';
+          content: 'Playwright.';
         }
 
         81%,
         100% {
-          content: 'boas práticas e padrões.';
+          content: 'Typescript.';
         }
       }
     }
@@ -127,7 +128,7 @@
 @media screen and (max-width: 900px) {
   .home {
     flex-direction: column;
-    
+
     .content-animation {
       display: none;
     }
