@@ -1,8 +1,23 @@
 <div class="home">
   <section class="content-text">
-    <span>&lt;Hello, world!&gt;</span>
+    <span class="hello-world">&lt;Hello, world!&gt;</span>
 
-    <h1>Meu nome é George. Sou desenvolvedor Front-end Angular</h1>
+    <h1
+      class="main-text"
+      role="heading"
+      aria-level="1"
+      aria-label="Olá, muito prazer, meu nome é George. Sou desenvolvedor Front-end Angular.">
+      <p aria-hidden="true">
+        Olá, muito prazer, meu nome é George. Trabalho com <span></span>
+      </p>
+    </h1>
+
+    <button
+      class="button-default"
+      (click)="goToContact()"
+      (keyup.enter)="goToContact()">
+      ENTRE EM CONTATO
+    </button>
   </section>
 
   <section class="content-animation">

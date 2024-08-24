@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import './app/scss/global';
+@import './app/scss/tokens/typography/token';
+@import './app/scss/tokens/colors/token';
 
 * {
   box-sizing: border-box;
@@ -15,4 +17,19 @@ body {
   font-family: $font-family;
   color: $color-white;
   background-color: $color-black;
+}
+
+.button-default {
+  padding: 0.5rem 1rem;
+  border: 1px solid $color-white;
+  font-family: $font-family;
+  background: transparent;
+  color: $color-white;
+  @include transition;
+
+  &:hover {
+    cursor: pointer;
+    background: $color-white;
+    color: $color-black;
+  }
 }
