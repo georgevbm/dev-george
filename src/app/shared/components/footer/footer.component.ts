@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import {
   bootstrapEnvelopeAtFill,
@@ -25,11 +25,11 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
   ],
 })
 export class FooterComponent {
+  private router = inject(Router);
+
   get showButtonEmail() {
     return this.router.url !== '/contact';
   }
-
-  constructor(private router: Router) {}
 
   goToWhatsApp() {
     window.open('https://w.app/devgeorge', '_blank');

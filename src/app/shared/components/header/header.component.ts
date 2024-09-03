@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { bootstrapList, bootstrapX } from '@ng-icons/bootstrap-icons';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 
@@ -13,6 +14,14 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
 })
 export class HeaderComponent {
   opened = false;
+  private router = inject(Router);
+
+  redirectTo(url: string) {
+    this.router.navigateByUrl(url);
+    setTimeout(() => {
+      this.opened = false;
+    }, 100);
+  }
 
   toggleMenu() {
     this.opened = !this.opened;
