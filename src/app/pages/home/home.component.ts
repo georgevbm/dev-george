@@ -12,6 +12,6 @@ export class HomeComponent {
   private router = inject(Router);
 
   goToContact() {
-    this.router.navigateByUrl('/contact');
+    this.router.navigateByUrl('contact');
   }
 }

@@ -32,7 +32,7 @@
       span {
         position: relative;
         z-index: -1;
-        
+
         &::before {
           content: '';
           color: $color-gray;
@@ -90,27 +90,27 @@
       @keyframes words {
         0%,
         20% {
-          content: 'Angular Framework.';
+          content: 'código limpo.';
         }
 
         21%,
         40% {
-          content: 'teste com Jest.';
+          content: 'design responsivo.';
         }
 
         41%,
         60% {
-          content: 'HTML e CSS.';
+          content: 'atenção aos detalhes.';
         }
 
         61%,
         80% {
-          content: 'Playwright.';
+          content: 'eficiência.';
         }
 
         81%,
         100% {
-          content: 'Typescript.';
+          content: 'interfaces intuitivas.';
         }
       }
     }
