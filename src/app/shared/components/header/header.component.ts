@@ -13,8 +13,8 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
   viewProviders: [provideIcons({ bootstrapList, bootstrapX })],
 })
 export class HeaderComponent {
-  opened = false;
   private router = inject(Router);
+  opened = false;
 
   redirectTo(url: string) {
     this.router.navigateByUrl(url).then(() => (this.opened = false));
