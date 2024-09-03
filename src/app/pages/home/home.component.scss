@@ -31,7 +31,8 @@
 
       span {
         position: relative;
-
+        z-index: -1;
+        
         &::before {
           content: '';
           color: $color-gray;
@@ -50,7 +51,6 @@
             type 20s steps(10) infinite;
           width: calc(100% + 5px);
           background-color: $color-black;
-          z-index: 2;
         }
       }
 
@@ -114,14 +114,6 @@
         }
       }
     }
-  }
-
-  .content-animation {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
   }
 }
 

@@ -13,5 +13,6 @@ $default-transition: ease-in-out;
   transition:
     visibility 0s,
     opacity $default-time,
+    height $default-time,
     transform $default-time;
 }
