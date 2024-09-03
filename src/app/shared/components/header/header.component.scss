@@ -2,7 +2,7 @@
 @import './../../../scss/tokens/colors/token';
 @import './../../../scss/tokens/typography/token';
 
-#navigation {  
+#navigation {
   background-color: $color-black;
 
   #header {
@@ -77,6 +77,7 @@
       margin: 0;
       padding: 0;
       list-style: none;
+      background: $color-black;
 
       li {
         width: 100%;
@@ -91,9 +92,9 @@
           @include transition;
 
           &:hover {
+            cursor: pointer;
             color: $color-black;
             background-color: $color-gray;
-            cursor: pointer;
           }
         }
       }

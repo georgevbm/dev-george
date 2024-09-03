@@ -17,10 +17,7 @@ export class HeaderComponent {
   private router = inject(Router);
 
   redirectTo(url: string) {
-    this.router.navigateByUrl(url);
-    setTimeout(() => {
-      this.opened = false;
-    }, 100);
+    this.router.navigateByUrl(url).then(() => (this.opened = false));
   }
 
   toggleMenu() {
