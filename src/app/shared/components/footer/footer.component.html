@@ -14,25 +14,31 @@
   }
 
   <div class="buttons-right">
-    <ng-icon
-      class="icon"
-      name="bootstrapGithub"
+    <div
+      role="button"
+      aria-label="Botão ir para o Github"
       tabindex="0"
       (click)="goToGithub()"
-      (keyup.enter)="goToGithub()"></ng-icon>
+      (keyup.enter)="goToGithub()">
+      <ng-icon class="icon" name="bootstrapGithub"></ng-icon>
+    </div>
 
-    <ng-icon
-      class="icon"
-      name="bootstrapLinkedin"
+    <div
+      role="button"
+      aria-label="Botão ir para o LinkedIn"
       tabindex="0"
       (click)="goToLinkedIn()"
-      (keyup.enter)="goToLinkedIn()"></ng-icon>
+      (keyup.enter)="goToLinkedIn()">
+      <ng-icon class="icon" name="bootstrapLinkedin"></ng-icon>
+    </div>
 
-    <ng-icon
-      class="icon"
-      name="bootstrapWhatsapp"
+    <div
+      role="button"
+      aria-label="Botão ir para o WhatsApp"
       tabindex="0"
       (click)="goToWhatsApp()"
-      (keyup.enter)="goToWhatsApp()"></ng-icon>
+      (keyup.enter)="goToWhatsApp()">
+      <ng-icon class="icon" name="bootstrapWhatsapp"></ng-icon>
+    </div>
   </div>
 </footer>
