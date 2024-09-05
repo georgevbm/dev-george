@@ -1,1 +1,69 @@
-<div class="contact">contact works!</div>
+<div class="contact">
+  <h1 class="title">&lt;Contato&gt;</h1>
+
+  <div class="content">
+    <section class="content-text">
+      <span class="text-contact">
+        Basta me enviar uma mensagem quando e como quiser, e daremos início à
+        nossa colaboração.
+      </span>
+
+      <div class="info-contact">
+        <span class="label"> TELEFONE: </span>
+        <span class="value"> +55 (49) 99921-9083 </span>
+      </div>
+
+      <div class="info-contact">
+        <span class="label"> E-MAIL: </span>
+        <span class="value"> george.vbm&#64;hotmail.com </span>
+      </div>
+    </section>
+
+    <section class="content-form">
+      <form [formGroup]="formContact" class="form-contact">
+        <input
+          type="text"
+          class="input-default"
+          formControlName="name"
+          placeholder="NOME"
+          [ngClass]="{ error: getErrorControl('name') }" />
+        <div class="container-error-message">
+          @if (getErrorControl('name')) {
+            <span class="error-message">Insira um nome válido</span>
+          }
+        </div>
+
+        <input
+          type="email"
+          class="input-default"
+          formControlName="email"
+          placeholder="E-MAIL"
+          [ngClass]="{ error: getErrorControl('email') }" />
+        <div class="container-error-message">
+          @if (getErrorControl('email')) {
+            <span class="error-message">Insira um e-mail válido</span>
+          }
+        </div>
+
+        <textarea
+          type="text"
+          class="input-default"
+          formControlName="message"
+          placeholder="SUA MENSAGEM"
+          [ngClass]="{ error: getErrorControl('message') }"></textarea>
+        <div class="container-error-message">
+          @if (getErrorControl('message')) {
+            <span class="error-message">Insira uma mensagem válida</span>
+          }
+        </div>
+      </form>
+
+      <button
+        class="button-default"
+        [disabled]="formContact.invalid"
+        (click)="send()">
+        ENVIAR
+      </button>
+    </section>
+  </div>
+</div>

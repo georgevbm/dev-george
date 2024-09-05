@@ -3,13 +3,12 @@
 @import './../../../scss/tokens/typography/token';
 
 #footer {
-  position: absolute;
   width: 100%;
-  min-height: 45px;
-  bottom: 0;
+  min-height: 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 1rem;
 
   .icon {
     color: $color-gray;
