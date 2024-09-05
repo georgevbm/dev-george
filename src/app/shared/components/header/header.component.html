@@ -19,12 +19,42 @@
 
   <section id="menu" [ngClass]="{ opened: opened }">
     <ul id="links">
-      <li><a class="p-1rem" (click)="redirectTo('home')">HOME</a></li>
       <li>
-        <a class="p-1rem" (click)="redirectTo('skills')">HABILIDADES</a>
+        <a
+          tabindex="0"
+          class="p-1rem"
+          (click)="redirectTo('home')"
+          (keyup.enter)="redirectTo('home')">
+          HOME
+        </a>
       </li>
-      <li><a class="p-1rem" (click)="redirectTo('projects')">PROJETOS</a></li>
-      <li><a class="p-1rem" (click)="redirectTo('contact')">CONTATO</a></li>
+      <li>
+        <a
+          tabindex="0"
+          class="p-1rem"
+          (click)="redirectTo('skills')"
+          (keyup.enter)="redirectTo('skills')">
+          HABILIDADES
+        </a>
+      </li>
+      <li>
+        <a
+          tabindex="0"
+          class="p-1rem"
+          (click)="redirectTo('projects')"
+          (keyup.enter)="redirectTo('projects')">
+          PROJETOS
+        </a>
+      </li>
+      <li>
+        <a
+          tabindex="0"
+          class="p-1rem"
+          (click)="redirectTo('contact')"
+          (keyup.enter)="redirectTo('contact')">
+          CONTATO
+        </a>
+      </li>
     </ul>
   </section>
 </header>

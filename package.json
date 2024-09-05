@@ -34,14 +34,9 @@
     "@angular/compiler-cli": "^18.2.0",
     "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@commitlint/types": "^19.0.3",
     "@testing-library/jest-dom": "^6.4.8",
     "@types/jest": "^29.5.12",
     "@types/jest-axe": "^3.5.9",
-    "commitizen": "^4.3.0",
-    "commitlint": "^19.4.1",
-    "commitlint-config-gitmoji": "^2.3.1",
-    "cz-gitmoji-adapter": "^2.0.0",
     "angular-eslint": "18.3.0",
     "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
@@ -69,38 +64,6 @@
       "ts-jest": {
         "tsConfig": "<rootDir>/tsconfig.spec.json",
         "stringifyContentPathRegex": "\\.html$"
-      }
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-gitmoji-adapter",
-      "useEmoji": true
-    },
-    "cz-gitmoji-adapter": {
-      "scopes": [
-        "accessibility",
-        "authentication",
-        "authorization",
-        "ui/ux",
-        "api-integration",
-        "docs",
-        "changelog",
-        "guides",
-        "config",
-        "environment",
-        "deployment",
-        "styles",
-        "testing",
-        "proxy",
-        "perf",
-        "model",
-        "seo",
-        "routing",
-        "assets"
-      ],
-      "questions": {
-        "scope": "Especifique um escopo: "
       }
     }
   }
