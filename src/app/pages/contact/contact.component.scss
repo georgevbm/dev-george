@@ -5,70 +5,74 @@
   width: 100%;
   height: 80%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 0 1rem;
 
-  .title {
-    font-size: $font-size-body-l;
-    color: $color-gray;
-    font-weight: 200;
-    margin-bottom: 2rem;
-  }
+  .container-contact {
+    width: 80%;
 
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 1rem;
-
-    .content-text {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-right: 0.5rem;
-
-      .text-contact {
-        font-size: $font-size-body-l;
-        font-weight: 200;
-      }
-
-      .info-contact {
-        display: flex;
-        flex-direction: column;
-        margin-top: 2rem;
-      }
+    .title {
+      font-size: $font-size-body-l;
+      color: $color-gray;
+      font-weight: 200;
+      margin-bottom: 2rem;
     }
 
-    .content-form {
-      width: 100%;
+    .content {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-left: 8px;
+      align-items: flex-start;
+      justify-content: center;
 
-      .form-contact {
+      .content-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0.5rem;
+        margin-top: 8px;
+
+        .text-contact {
+          font-size: $font-size-body-l;
+          font-weight: 200;
+        }
+
+        .info-contact {
+          display: flex;
+          flex-direction: column;
+          margin-top: 2rem;
+        }
+      }
+
+      .content-form {
         width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-left: 8px;
 
-        .container-error-message {
-          min-height: 1.5rem;
+        .form-contact {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          .container-error-message {
+            min-height: 1.5rem;
+          }
+
+          textarea {
+            height: 100px;
+            resize: none;
+          }
         }
 
-        textarea {
-          height: 100px;
-          resize: none;
+        button {
+          width: 45%;
+          margin-top: 1.5rem;
         }
-      }
-
-      button {
-        width: 45%;
-        margin-top: 1.5rem;
       }
     }
   }
@@ -78,17 +82,22 @@
   .contact {
     margin-top: 2rem;
 
-    .content {
-      flex-direction: column;
+    .container-contact {
+      width: 100%;
 
-      .content-text {
-        margin-right: 0 !important;
-      }
-
-      .content-form {
-        margin-left: 0 !important;
-        margin-top: 2rem;
+      .content {
+        flex-direction: column;
+  
+        .content-text {
+          margin-right: 0 !important;
+        }
+  
+        .content-form {
+          margin-left: 0 !important;
+          margin-top: 2rem;
+        }
       }
     }
+
   }
 }

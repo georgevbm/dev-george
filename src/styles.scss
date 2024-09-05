@@ -18,6 +18,7 @@ body {
   font-family: $font-family;
   color: $color-white;
   background-color: $color-black;
+  overflow: hidden;
 }
 
 .button-default {
@@ -86,4 +87,10 @@ body::-webkit-scrollbar-thumb {
   background-color: $color-black;
   border-radius: 1rem;
   border: 1px solid $color-gray;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    overflow: auto;
+  }
 }

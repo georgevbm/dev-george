@@ -9,108 +9,112 @@
   justify-content: center;
   padding: 0 16px;
 
-  .content-text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+  .container-home {
+    width: 80%;
 
-    .first-text {
-      font-weight: 200;
-      font-size: $font-size-body-m;
-    }
+    .content-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
 
-    .main-text {
-      margin: 2rem 0;
-      min-width: 308px;
-
-      p {
-        margin: 0;
+      .first-text {
+        font-weight: 200;
+        font-size: $font-size-body-l;
       }
 
-      span {
-        position: relative;
-        z-index: -1;
+      .main-text {
+        margin: 2rem 0;
+        min-width: 308px;
 
-        &::before {
-          content: '';
-          color: $color-gray;
-          animation: words 20s infinite;
-          white-space: nowrap;
+        p {
+          margin: 0;
         }
 
-        &::after {
-          content: '';
-          position: absolute;
-          height: 100%;
-          border-left: 2px solid $color-white;
-          right: -5px;
-          animation:
-            cursor 0.8s infinite,
-            type 20s steps(10) infinite;
-          width: calc(100% + 5px);
-          background-color: $color-black;
-        }
-      }
+        span {
+          position: relative;
+          z-index: -1;
 
-      @keyframes type {
-        10%,
-        15%,
-        30%,
-        35%,
-        50%,
-        55%,
-        70%,
-        75%,
-        90%,
-        95% {
-          width: 0;
+          &::before {
+            content: '';
+            color: $color-gray;
+            animation: words 20s infinite;
+            white-space: nowrap;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            border-left: 2px solid $color-white;
+            right: -5px;
+            animation:
+              cursor 0.8s infinite,
+              type 20s steps(10) infinite;
+            width: calc(100% + 5px);
+            background-color: $color-black;
+          }
         }
 
-        5%,
-        20%,
-        25%,
-        40%,
-        45%,
-        60%,
-        65%,
-        80%,
-        85% {
-          width: calc(100% + 5px);
-        }
-      }
+        @keyframes type {
+          10%,
+          15%,
+          30%,
+          35%,
+          50%,
+          55%,
+          70%,
+          75%,
+          90%,
+          95% {
+            width: 0;
+          }
 
-      @keyframes cursor {
-        0% {
-          border-left: 2px solid $color-black;
-        }
-      }
-
-      @keyframes words {
-        0%,
-        20% {
-          content: 'código limpo.';
-        }
-
-        21%,
-        40% {
-          content: 'design responsivo.';
+          5%,
+          20%,
+          25%,
+          40%,
+          45%,
+          60%,
+          65%,
+          80%,
+          85% {
+            width: calc(100% + 5px);
+          }
         }
 
-        41%,
-        60% {
-          content: 'atenção aos detalhes.';
+        @keyframes cursor {
+          0% {
+            border-left: 2px solid $color-black;
+          }
         }
 
-        61%,
-        80% {
-          content: 'eficiência.';
-        }
+        @keyframes words {
+          0%,
+          20% {
+            content: 'código bem escrito.';
+          }
 
-        81%,
-        100% {
-          content: 'interfaces claras.';
+          21%,
+          40% {
+            content: 'design responsivo.';
+          }
+
+          41%,
+          60% {
+            content: 'atenção aos detalhes.';
+          }
+
+          61%,
+          80% {
+            content: 'qualidade e eficiência.';
+          }
+
+          81%,
+          100% {
+            content: 'interfaces claras.';
+          }
         }
       }
     }
@@ -120,5 +124,9 @@
 @media screen and (max-width: 900px) {
   .home {
     flex-direction: column;
+
+    .container-home {
+      width: 100%;
+    }
   }
 }
