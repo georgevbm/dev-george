@@ -33,7 +33,7 @@ const typeMatch = commitMessage.match(
 
 if (typeMatch) {
   const type = typeMatch[1];
-  const emoji = `[${emojiMap[type]}]`;
+  const emoji = emojiMap[type];
 
   // Se houver um emoji correspondente, adicione-o antes da mensagem de commit
   if (emoji) {
