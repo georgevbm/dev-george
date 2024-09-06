@@ -2,17 +2,18 @@ const fs = require('fs');
 
 // Mapeamento dos tipos de commit para emojis Gitmoji
 const emojiMap = {
-  feat: '[✨]', // Adicionando uma nova funcionalidade
-  chore: '[🛠️]', // Tarefas de manutenção
-  fix: '[🐛]', // Corrigindo um bug
-  build: '[📦]', // Build do sistema
-  ci: '[👷]', // Integração contínua
-  docs: '[📚]', // Atualizando documentação
-  style: '[💄]', // Atualizando estilos, formatação de código
-  refactor: '[♻️]', // Refatoração de código
-  perf: '[⚡]', // Melhorando a performance
-  test: '[✅]', // Adicionando ou corrigindo testes
+  feat: '✨', // Adicionando uma nova funcionalidade
+  chore: '🛠️', // Tarefas de manutenção
+  fix: '🐛', // Corrigindo um bug
+  build: '📦', // Build do sistema
+  ci: '👷', // Integração contínua
+  docs: '📚', // Atualizando documentação
+  style: '💄', // Atualizando estilos, formatação de código
+  refactor: '♻️', // Refatoração de código
+  perf: '⚡', // Melhorando a performance
+  test: '✅', // Adicionando ou corrigindo testes
 };
+
 
 // Pegue o nome do arquivo onde a mensagem de commit está armazenada
 const commitMessageFile = process.argv[2];
@@ -33,7 +34,7 @@ const typeMatch = commitMessage.match(
 
 if (typeMatch) {
   const type = typeMatch[1];
-  const emoji = emojiMap[type];
+  const emoji = `[${emojiMap[type]}]`;
 
   // Se houver um emoji correspondente, adicione-o antes da mensagem de commit
   if (emoji) {
