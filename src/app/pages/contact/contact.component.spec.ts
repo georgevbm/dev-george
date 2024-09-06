@@ -21,6 +21,21 @@ describe('ContactComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should call getErrorControl with return false', () => {
+    component.formContact.controls['name'].setErrors(null);
+    const result = component.getErrorControl('name');
+
+    expect(result).toBeFalsy();
+  });
+
+  it('should call send', async () => {
+    const spyConsole = jest.spyOn(console, 'log');
+
+    component.send();
+
+    expect(spyConsole).toHaveBeenCalled();
+  });
+
   it('should have no accessibility violations', async () => {
     fixture.detectChanges();
     const results = await axe(fixture.nativeElement);

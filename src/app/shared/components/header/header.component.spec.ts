@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
 import { axe } from 'jest-axe';
+import { Router } from '@angular/router';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -38,5 +39,16 @@ describe('HeaderComponent', () => {
     component.opened = false;
     component.toggleMenu();
     expect(component.opened).toBeTruthy();
+  });
+
+  it('should call redirectTo and close menu', () => {
+    const spyRouter = jest
+      .spyOn(Router.prototype, 'navigateByUrl')
+      .mockResolvedValue(true);
+
+    component.redirectTo('contact');
+
+    expect(component.opened).toBeFalsy();
+    expect(spyRouter).toHaveBeenCalledWith('contact');
   });
 });
