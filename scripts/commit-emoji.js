@@ -16,6 +16,12 @@ const emojiMap = {
 
 // Pegue o nome do arquivo onde a mensagem de commit está armazenada
 const commitMessageFile = process.argv[2];
+if (!commitMessageFile) {
+  console.error(
+    'Erro: O caminho do arquivo de mensagem de commit não foi fornecido.'
+  );
+  process.exit(1); // Interrompe o script se o caminho não for fornecido
+}
 
 // Leia a mensagem de commit
 let commitMessage = fs.readFileSync(commitMessageFile, 'utf8').trim();
@@ -27,7 +33,7 @@ const typeMatch = commitMessage.match(
 
 if (typeMatch) {
   const type = typeMatch[1];
-  const emoji = emojiMap[type];
+  const emoji = `[${emojiMap[type]}]`;
 
   // Se houver um emoji correspondente, adicione-o antes da mensagem de commit
   if (emoji) {
