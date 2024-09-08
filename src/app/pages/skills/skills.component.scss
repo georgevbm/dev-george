@@ -32,7 +32,7 @@
       justify-content: center;
       flex-direction: column;
 
-      .text-skills {
+      .text-and-skills {
         width: 100%;
         display: flex;
         justify-content: flex-start;
@@ -122,6 +122,14 @@
 
     .container-skills {
       width: 100%;
+
+      .text-and-skills {
+        flex-direction: column;
+      }
+
+      .container-advantages {
+        flex-direction: column;
+      }
     }
   }
 }
