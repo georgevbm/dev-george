@@ -40,13 +40,16 @@
         <div class="container-advantages">
           @for (card of advantagesCards; track card.title) {
             <article
+              tabindex="0"
               class="card-advantage"
               attr.aria-label="{{ card.title + ', ' + card.description }}">
-              <ng-icon class="icon" [name]="card.icon"></ng-icon>
+              <ng-icon
+                class="icon"
+                [name]="card.icon"></ng-icon>
 
-              <h3>{{ card.title }}</h3>
+              <h3 aria-hidden="true">{{ card.title }}</h3>
 
-              <span>
+              <span aria-hidden="true">
                 {{ card.description }}
               </span>
             </article>
