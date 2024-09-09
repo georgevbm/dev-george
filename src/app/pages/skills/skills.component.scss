@@ -125,6 +125,10 @@
 
       .text-and-skills {
         flex-direction: column;
+
+        .images-skills {
+          margin: 1rem;
+        }
       }
 
       .container-advantages {

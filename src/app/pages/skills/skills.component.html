@@ -42,14 +42,11 @@
             <article
               class="card-advantage"
               attr.aria-label="{{ card.title + ', ' + card.description }}">
-              <ng-icon
-                aria-hidden="true"
-                class="icon"
-                [name]="card.icon"></ng-icon>
+              <ng-icon class="icon" [name]="card.icon"></ng-icon>
 
-              <h3 aria-hidden="true">{{ card.title }}</h3>
+              <h3>{{ card.title }}</h3>
 
-              <span aria-hidden="true">
+              <span>
                 {{ card.description }}
               </span>
             </article>
