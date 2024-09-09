@@ -8,9 +8,13 @@
           <h2>Algumas de minhas habilidades e especialidades</h2>
 
           <ul>
-            <li>Desen. de Websites</li>
-            <li>Desen. Wordpress</li>
-            <li>Desen. de SPA's</li>
+            <li aria-label="Desenvolvimento de Websites">
+              Desenvolvimento de Websites
+            </li>
+            <li aria-label="Desenvolvimento Wordpress">
+              Desenvolvimento Wordpress
+            </li>
+            <li>Desenvolvimento de SPA's</li>
             <li>Aplicações com acessibilidade</li>
             <li>Alta cobertura de testes</li>
             <li>Testes automatizados</li>
@@ -31,44 +35,25 @@
       </section>
 
       <section class="advantages">
-        <h2 class="title">&lt;Vantagens&gt;</h2>
+        <h2 class="title mt-2rem">&lt;Vantagens&gt;</h2>
 
         <div class="container-advantages">
-          <div class="card-advantage">
-            <ng-icon class="icon" name="bootstrapPeopleFill"></ng-icon>
+          @for (card of advantagesCards; track card.title) {
+            <article
+              class="card-advantage"
+              attr.aria-label="{{ card.title + ', ' + card.description }}">
+              <ng-icon
+                aria-hidden="true"
+                class="icon"
+                [name]="card.icon"></ng-icon>
 
-            <h3>Comunicação</h3>
+              <h3 aria-hidden="true">{{ card.title }}</h3>
 
-            <span>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less.
-            </span>
-          </div>
-
-          <div class="card-advantage">
-            <ng-icon class="icon" name="bootstrapPeopleFill"></ng-icon>
-
-            <h3>Comunicação</h3>
-
-            <span>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less,
-            </span>
-          </div>
-
-          <div class="card-advantage">
-            <ng-icon class="icon" name="bootstrapPeopleFill"></ng-icon>
-
-            <h3>Comunicação</h3>
-
-            <span>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less.
-            </span>
-          </div>
+              <span aria-hidden="true">
+                {{ card.description }}
+              </span>
+            </article>
+          }
         </div>
       </section>
     </div>
