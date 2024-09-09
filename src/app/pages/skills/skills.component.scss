@@ -7,6 +7,7 @@
 
 ::ng-deep #footer {
   padding: 1rem !important;
+  position: relative !important;
 }
 
 .skills {
@@ -59,7 +60,7 @@
           display: grid;
           grid-template-columns: 50px 50px 50px 50px 50px;
           justify-content: center;
-          gap: 1.5rem;
+          gap: 2rem;
 
           .bullet-skill {
             width: fit-content;
