@@ -17,10 +17,9 @@ module.exports = {
         'test',
       ],
     ],
-    'subject-case': [
-      2,
-      'never',
-      ['sentence-case', 'start-case', 'pascal-case', 'upper-case'],
-    ],
+    'header-case': [0],
+    'subject-case': [0],
+    'type-empty': [0],
+    'subject-empty': [0]
   },
 };
