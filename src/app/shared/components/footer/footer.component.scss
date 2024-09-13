@@ -3,13 +3,14 @@
 @import './../../../scss/tokens/typography/token';
 
 #footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
+  background: $color-black;
 
   .icon {
     color: $color-gray;

@@ -4,9 +4,9 @@
 
 #navigation {
   #header {
-    position: relative;
+    position: fixed;
+    top: 0;
     width: 100%;
-    min-height: 10%;
     z-index: 99;
     background-color: $color-black;
 
