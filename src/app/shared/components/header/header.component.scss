@@ -64,11 +64,13 @@
     background: $color-black;
     opacity: 0;
     visibility: hidden;
+    overflow: auto;
     @include transitionMenu;
 
     &.opened {
       opacity: 1;
       visibility: visible;
+      overflow: hidden;
     }
 
     #links {

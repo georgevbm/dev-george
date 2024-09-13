@@ -12,6 +12,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  margin-bottom: 90px;
 
   .container-skills {
     width: 80%;
@@ -122,29 +123,24 @@
 }
 
 @media screen and (max-width: 900px) {
-  .skills {
-    margin-bottom: 90px;
+  .container-skills {
+    width: 100%;
 
-    .container-skills {
-      width: 100%;
+    .text-and-skills {
+      flex-direction: column;
 
-      .text-and-skills {
-        flex-direction: column;
-
-        .images-skills {
-          margin: 1rem;
-        }
+      .images-skills {
+        margin: 1rem;
       }
+    }
 
-      .container-advantages {
-        flex-direction: column;
+    .container-advantages {
+      flex-direction: column;
 
-        .card-advantage {
-          .icon {
-            font-size: 2rem !important;
-          }
+      .card-advantage {
+        .icon {
+          font-size: 2rem !important;
         }
-
       }
     }
   }
