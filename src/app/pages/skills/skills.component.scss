@@ -125,7 +125,7 @@
 
 @media screen and (max-width: 900px) {
   .container-skills {
-    width: 100%;
+    width: 100% !important;
 
     .text-and-skills {
       flex-direction: column;
