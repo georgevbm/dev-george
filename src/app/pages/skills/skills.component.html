@@ -19,13 +19,11 @@
 
         <div class="images-skills">
           @for (bullet of skillBullets; track bullet.url) {
-            <div class="bullet-skill">
-              <img
-                [ngSrc]="bullet.url"
-                [alt]="bullet.alt"
-                width="50"
-                height="50" />
-            </div>
+            <img
+              [ngSrc]="bullet.url"
+              [alt]="bullet.alt"
+              width="50"
+              height="50" />
           }
         </div>
       </section>

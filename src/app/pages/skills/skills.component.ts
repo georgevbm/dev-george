@@ -22,79 +22,52 @@ export class SkillsComponent {
     {
       url: 'image-skills/angular-logo.png',
       alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
     },
     {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
+      alt: 'Logotipo do HTML',
     },
     {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
+      alt: 'Logotipo do CSS',
     },
     {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
-    },
-    {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg',
+      alt: 'Logotipo do SASS',
     },
     // Segunda linha
     {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+      alt: 'Logotipo do Javascript',
     },
     {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+      alt: 'Logotipo do Typescript',
     },
     {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rxjs/rxjs-original.svg',
+      alt: 'Logotipo do Rxjs',
     },
     {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
-    },
-    {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ngrx/ngrx-original.svg',
+      alt: 'Logotipo do NgRx',
     },
     // Terceiera linha
     {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg',
+      alt: 'Logotipo do JEST',
     },
     {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg',
+      alt: 'Logotipo do Playwright',
     },
     {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+      alt: 'Logotipo do Git',
     },
     {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
-    },
-    {
-      url: 'image-skills/angular-logo.png',
-      alt: 'Logotipo do Angular',
-      backgroundColor: '#FFFFFF',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg',
+      alt: 'Logotipo do NPM',
     },
   ];
 

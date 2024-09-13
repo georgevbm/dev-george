@@ -57,19 +57,9 @@
         .images-skills {
           flex: 1;
           display: grid;
-          grid-template-columns: 50px 50px 50px 50px 50px;
+          grid-template-columns: 50px 50px 50px 50px;
           justify-content: center;
-          gap: 2rem;
-
-          .bullet-skill {
-            width: fit-content;
-            height: fit-content;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background-color: $color-white;
-          }
+          gap: 2rem 3rem;
         }
       }
 
@@ -131,7 +121,7 @@
       flex-direction: column;
 
       .images-skills {
-        margin: 1rem;
+        margin: 1rem 0;
       }
     }
 
@@ -147,9 +137,8 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 450px) {
   .images-skills {
     gap: 1rem !important;
-    margin: 1rem 0;
   }
 }

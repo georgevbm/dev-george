@@ -1,7 +1,6 @@
 export interface SkillBullet {
   url: string;
   alt: string;
-  backgroundColor: string;
 }
 
 export interface AdvantagesCard {
