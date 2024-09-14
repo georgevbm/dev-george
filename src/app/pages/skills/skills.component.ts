@@ -20,7 +20,7 @@ export class SkillsComponent {
   skillBullets: SkillBullet[] = [
     // Primeira linha
     {
-      url: 'image-skills/angular-logo.png',
+      url: 'image-skills/angular-logo.svg',
       alt: 'Logotipo do Angular',
     },
     {
@@ -32,16 +32,16 @@ export class SkillsComponent {
       alt: 'Logotipo do CSS',
     },
     {
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg',
-      alt: 'Logotipo do SASS',
+      url: 'image-skills/javascript-logo.svg',
+      alt: 'Logotipo do Javascript',
     },
     // Segunda linha
     {
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
-      alt: 'Logotipo do Javascript',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg',
+      alt: 'Logotipo do SASS',
     },
     {
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+      url: 'image-skills/typescript-logo.svg',
       alt: 'Logotipo do Typescript',
     },
     {
