@@ -2,7 +2,11 @@ import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { AdvantagesCard, SkillBullet } from './types/skills.interface';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { bootstrapPeopleFill } from '@ng-icons/bootstrap-icons';
+import {
+  bootstrapArrowRepeat,
+  bootstrapJournalCode,
+  bootstrapPeopleFill,
+} from '@ng-icons/bootstrap-icons';
 
 @Component({
   selector: 'app-skills',
@@ -13,6 +17,8 @@ import { bootstrapPeopleFill } from '@ng-icons/bootstrap-icons';
   viewProviders: [
     provideIcons({
       bootstrapPeopleFill,
+      bootstrapArrowRepeat,
+      bootstrapJournalCode,
     }),
   ],
 })
@@ -74,24 +80,18 @@ export class SkillsComponent {
   advantagesCards: AdvantagesCard[] = [
     {
       title: 'Comunicação',
-      description: `It is a long established fact that a reader 
-            will be distracted by the readable content of a page when looking at 
-            its layout. The point of using Lorem Ipsum is that it has a more-or-less.`,
+      description: `Sei expressar minhas ideias de forma clara, tanto verbalmente quanto por escrito, especialmente quando trabalho em equipes multidisciplinares ou em projetos remotos.`,
       icon: 'bootstrapPeopleFill',
     },
     {
-      title: 'Card 2',
-      description: `It is a long established fact that a reader 
-            will be distracted by the readable content of a page when looking at 
-            its layout. The point of using Lorem Ipsum is that it has a more-or-less.`,
-      icon: 'bootstrapPeopleFill',
+      title: 'Adaptabilidade',
+      description: `Tenho flexibilidade e estou sempre aberto para aprender sobre novas ferramentas, metodologias e abordagens.`,
+      icon: 'bootstrapArrowRepeat',
     },
     {
-      title: 'Card 3',
-      description: `It is a long established fact that a reader 
-            will be distracted by the readable content of a page when looking at 
-            its layout. The point of using Lorem Ipsum is that it has a more-or-less.`,
-      icon: 'bootstrapPeopleFill',
+      title: 'Atenção aos detalhes',
+      description: `No desenvolvimento de software, pequenos erros podem causar grandes problemas. Sou detalhista, o que me ajuda a evitar bugs e garantir a qualidade do código que desenvolvo.`,
+      icon: 'bootstrapJournalCode',
     },
   ];
 }
