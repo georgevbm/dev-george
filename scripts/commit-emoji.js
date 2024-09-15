@@ -14,7 +14,6 @@ const emojiMap = {
   test: '✅', // Adicionando ou corrigindo testes
 };
 
-
 // Pegue o nome do arquivo onde a mensagem de commit está armazenada
 const commitMessageFile = process.argv[2];
 if (!commitMessageFile) {

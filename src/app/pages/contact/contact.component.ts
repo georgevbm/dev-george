@@ -7,11 +7,12 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { LoadingComponent } from '../../shared/components/loading/loading.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, LoadingComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -57,7 +58,7 @@ export class ContactComponent implements OnInit {
       .subscribe({
         error: error => {
           if (error.status === 200) {
-            // this.isLoading = false;
+            this.isLoading = false;
           }
         },
       });
