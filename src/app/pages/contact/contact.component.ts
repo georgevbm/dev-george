@@ -8,17 +8,21 @@ import {
   Validators,
 } from '@angular/forms';
 import { LoadingComponent } from '../../shared/components/loading/loading.component';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, LoadingComponent],
+  imports: [ReactiveFormsModule, CommonModule, LoadingComponent, ToastModule],
+  providers: [MessageService],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent implements OnInit {
   private fb = inject(FormBuilder);
   private http = inject(HttpClient);
+  private messageService = inject(MessageService);
 
   isLoading = false;
 
@@ -57,8 +61,22 @@ export class ContactComponent implements OnInit {
       .post('https://getform.io/f/aqonlqza', this.formContact.value)
       .subscribe({
         error: error => {
+          this.isLoading = false;
+
           if (error.status === 200) {
-            this.isLoading = false;
+            this.messageService.add({
+              severity: 'success',
+              summary: 'Sucesso!',
+              detail: 'Seu e-mail foi enviado.',
+              life: 3000,
+            });
+          } else {
+            this.messageService.add({
+              severity: 'error',
+              summary: 'Erro!',
+              detail: 'Ocorreu um erro ao enviar o e-mail.',
+              life: 3000,
+            });
           }
         },
       });
