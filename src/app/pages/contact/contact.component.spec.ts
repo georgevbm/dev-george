@@ -33,9 +33,13 @@ describe('ContactComponent', () => {
   });
 
   it('should call send - success', async () => {
-    const spyHttp = jest
-      .spyOn(HttpClient.prototype, 'post')
-      .mockReturnValue(throwError({ status: 200 }));
+    const spyHttp = jest.spyOn(HttpClient.prototype, 'post').mockReturnValue(
+      throwError(() => {
+        return {
+          status: 200,
+        };
+      })
+    );
 
     component.send();
 
