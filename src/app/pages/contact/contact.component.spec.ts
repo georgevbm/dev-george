@@ -4,6 +4,7 @@ import { ContactComponent } from './contact.component';
 import { axe } from 'jest-axe';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { throwError } from 'rxjs';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -31,8 +32,10 @@ describe('ContactComponent', () => {
     expect(result).toBeFalsy();
   });
 
-  it('should call send', async () => {
-    const spyHttp = jest.spyOn(HttpClient.prototype, 'post');
+  it('should call send - success', async () => {
+    const spyHttp = jest
+      .spyOn(HttpClient.prototype, 'post')
+      .mockReturnValue(throwError({ status: 200 }));
 
     component.send();
 

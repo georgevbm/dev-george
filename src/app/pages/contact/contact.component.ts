@@ -60,9 +60,6 @@ export class ContactComponent implements OnInit {
             // this.isLoading = false;
           }
         },
-        complete: () => {
-          this.isLoading = false;
-        },
       });
   }
 }
