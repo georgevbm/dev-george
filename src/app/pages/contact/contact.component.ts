@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -16,6 +17,9 @@ import {
 })
 export class ContactComponent implements OnInit {
   private fb = inject(FormBuilder);
+  private http = inject(HttpClient);
+
+  isLoading = false;
 
   formContact!: FormGroup;
 
@@ -46,6 +50,19 @@ export class ContactComponent implements OnInit {
   }
 
   send() {
-    console.log('Enviar clicado!');
+    this.isLoading = true;
+
+    this.http
+      .post('https://getform.io/f/aqonlqza', this.formContact.value)
+      .subscribe({
+        error: error => {
+          if (error.status === 200) {
+            // this.isLoading = false;
+          }
+        },
+        complete: () => {
+          this.isLoading = false;
+        },
+      });
   }
 }

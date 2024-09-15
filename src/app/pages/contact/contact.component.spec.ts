@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactComponent } from './contact.component';
 import { axe } from 'jest-axe';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -10,6 +12,7 @@ describe('ContactComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ContactComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ContactComponent);
@@ -29,11 +32,11 @@ describe('ContactComponent', () => {
   });
 
   it('should call send', async () => {
-    const spyConsole = jest.spyOn(console, 'log');
+    const spyHttp = jest.spyOn(HttpClient.prototype, 'post');
 
     component.send();
 
-    expect(spyConsole).toHaveBeenCalled();
+    expect(spyHttp).toHaveBeenCalled();
   });
 
   it('should have no accessibility violations', async () => {
