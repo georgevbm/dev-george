@@ -10,3 +10,9 @@
     width: 80%;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .container-projects {
+    width: 100% !important;
+  }
+}

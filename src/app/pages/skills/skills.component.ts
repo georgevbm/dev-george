@@ -1,12 +1,12 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
-import { AdvantagesCard, SkillBullet } from './types/skills.interface';
-import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import {
   bootstrapArrowRepeat,
   bootstrapJournalCode,
   bootstrapPeopleFill,
 } from '@ng-icons/bootstrap-icons';
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { AdvantagesCard, SkillBullet } from './types/skills.interface';
 
 @Component({
   selector: 'app-skills',
@@ -72,8 +72,8 @@ export class SkillsComponent {
       alt: 'Logotipo do Git',
     },
     {
-      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg',
-      alt: 'Logotipo do NPM',
+      url: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
+      alt: 'Logotipo do AWS Certified Cloud Practitioner',
     },
   ];
 
