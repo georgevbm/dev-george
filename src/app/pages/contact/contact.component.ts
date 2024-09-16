@@ -7,9 +7,9 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { LoadingComponent } from '../../shared/components/loading/loading.component';
-import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
+import { LoadingComponent } from '../../shared/components/loading/loading.component';
 
 @Component({
   selector: 'app-contact',
@@ -70,6 +70,8 @@ export class ContactComponent implements OnInit {
               detail: 'Seu e-mail foi enviado.',
               life: 3000,
             });
+
+            this.formContact.reset();
           } else {
             this.messageService.add({
               severity: 'error',
