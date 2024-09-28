@@ -1,3 +1,19 @@
 <div class="projects">
-  <div class="container-projects">Projects</div>
+  <div class="container-projects">
+    <p-carousel [value]="projects" [numVisible]="1" [numScroll]="1">
+      <ng-template let-project pTemplate="item">
+        <p>
+          {{ project.name }}
+        </p>
+
+        <p>
+          {{ project.description }}
+        </p>
+
+        <p>
+          {{ project.status }}
+        </p>
+      </ng-template>
+    </p-carousel>
+  </div>
 </div>
