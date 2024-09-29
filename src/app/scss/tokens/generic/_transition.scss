@@ -16,3 +16,18 @@ $default-transition: ease-in-out;
     height $default-time,
     transform $default-time;
 }
+
+@mixin fadeInBottom($time, $delay) {
+  opacity: 0;
+  animation: fadeInBottom $time $default-transition $delay forwards;
+}
+
+@keyframes fadeInBottom {
+  from {  
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -29,6 +29,7 @@
     align-items: center;
     color: $color-gray;
     @include transition;
+    @include fadeInBottom(1s, 0.6s);
 
     .icon-email {
       font-size: $font-size-h3;
@@ -48,6 +49,18 @@
   .buttons-right {
     display: flex;
     gap: 16px;
+
+    .button-git {
+      @include fadeInBottom(1s, 0.4s);
+    }
+
+    .button-linkedin {
+      @include fadeInBottom(1s, 0.2s);
+    }
+
+    .button-whatsapp {
+      @include fadeInBottom(1s, 0s);
+    }
   }
 }
 

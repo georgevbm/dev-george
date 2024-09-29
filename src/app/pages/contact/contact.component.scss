@@ -1,5 +1,6 @@
 @import './../../scss/tokens/typography/token';
 @import './../../scss/tokens/colors/token';
+@import './../../scss/tokens/generic/transition';
 
 ::ng-deep .p-toast .p-toast-message.p-toast-message-success {
   background: $color-black;
@@ -45,6 +46,7 @@
       color: $color-gray;
       font-weight: 200;
       margin-bottom: 2rem;
+      @include fadeInBottom(1s, 0s);
     }
 
     .content {
@@ -60,6 +62,7 @@
         align-items: flex-start;
         margin-right: 0.5rem;
         margin-top: 8px;
+        @include fadeInBottom(1s, 0.2s);
 
         .text-contact {
           font-size: $font-size-body-l;
@@ -80,6 +83,7 @@
         justify-content: space-between;
         align-items: flex-end;
         margin-left: 8px;
+        @include fadeInBottom(1s, 0.4s);
 
         .form-contact {
           width: 100%;
@@ -100,6 +104,7 @@
         button {
           width: 45%;
           margin-top: 1.5rem;
+          @include fadeInBottom(1s, 0.8s);
         }
       }
     }
