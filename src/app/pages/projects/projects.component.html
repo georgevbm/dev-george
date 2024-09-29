@@ -1,18 +1,32 @@
 <div class="projects">
   <div class="container-projects">
-    <p-carousel [value]="projects" [numVisible]="1" [numScroll]="1">
+    <h1 class="title">&lt;Projetos&gt;</h1>
+
+    <p class="description-projects">
+      Confira alguns dos meus principais projetos, desenvolvidos com foco em
+      qualidade, desempenho e inovação, utilizando tecnologias como Angular e
+      TypeScript.
+    </p>
+
+    <p-carousel
+      [value]="projects"
+      [numVisible]="1"
+      [numScroll]="1"
+      [showIndicators]="false">
       <ng-template let-project pTemplate="item">
-        <p>
-          {{ project.name }}
-        </p>
+        <div class="container-carousel">
+          <p>
+            {{ project.name }}
+          </p>
 
-        <p>
-          {{ project.description }}
-        </p>
+          <p>
+            {{ project.description }}
+          </p>
 
-        <p>
-          {{ project.status }}
-        </p>
+          <p>
+            {{ project.status }}
+          </p>
+        </div>
       </ng-template>
     </p-carousel>
   </div>
