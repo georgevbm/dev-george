@@ -1,0 +1,84 @@
+@mixin textsTyped($text1, $text2, $text3, $text4, $text5) {
+  position: relative;
+  z-index: -1;
+
+  &::before {
+    content: '';
+    color: $color-gray;
+    animation: words 20s infinite;
+    white-space: nowrap;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid $color-white;
+    right: -5px;
+    animation:
+      cursor 0.8s infinite,
+      type 20s steps(10) infinite;
+    width: calc(100% + 5px);
+    background-color: $color-black;
+  }
+  
+  @keyframes type {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+      width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+      width: calc(100% + 5px);
+    }
+  }
+
+  @keyframes cursor {
+    0% {
+      border-left: 2px solid $color-black;
+    }
+  }
+
+  @keyframes words {
+    0%,
+    20% {
+      content: $text2;
+    }
+
+    21%,
+    40% {
+      content: $text2;
+    }
+
+    41%,
+    60% {
+      content: $text3;
+    }
+
+    61%,
+    80% {
+      content: $text4;
+    }
+
+    81%,
+    100% {
+      content: $text5;
+    }
+  }
+}

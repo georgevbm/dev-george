@@ -36,93 +36,18 @@
         }
 
         span {
-          position: relative;
-          z-index: -1;
-
-          &::before {
-            content: '';
-            color: $color-gray;
-            animation: words 20s infinite;
-            white-space: nowrap;
-          }
-
-          &::after {
-            content: '';
-            position: absolute;
-            height: 100%;
-            border-left: 2px solid $color-white;
-            right: -5px;
-            animation:
-              cursor 0.8s infinite,
-              type 20s steps(10) infinite;
-            width: calc(100% + 5px);
-            background-color: $color-black;
-          }
-        }
-
-        @keyframes type {
-          10%,
-          15%,
-          30%,
-          35%,
-          50%,
-          55%,
-          70%,
-          75%,
-          90%,
-          95% {
-            width: 0;
-          }
-
-          5%,
-          20%,
-          25%,
-          40%,
-          45%,
-          60%,
-          65%,
-          80%,
-          85% {
-            width: calc(100% + 5px);
-          }
-        }
-
-        @keyframes cursor {
-          0% {
-            border-left: 2px solid $color-black;
-          }
-        }
-
-        @keyframes words {
-          0%,
-          20% {
-            content: 'código bem escrito.';
-          }
-
-          21%,
-          40% {
-            content: 'design responsivo.';
-          }
-
-          41%,
-          60% {
-            content: 'atenção aos detalhes.';
-          }
-
-          61%,
-          80% {
-            content: 'qualidade e eficiência.';
-          }
-
-          81%,
-          100% {
-            content: 'interfaces claras.';
-          }
+          @include textsTyped(
+            'código bem escrito.',
+            'design responsivo.',
+            'atenção aos detalhes.',
+            'qualidade e eficiência.',
+            'interfaces claras.'
+          );
         }
       }
 
       .button-home {
-        @include fadeInBottom(1s, 0.6s);
+        @include fadeInBottom(1s, 0.8s);
       }
     }
   }
