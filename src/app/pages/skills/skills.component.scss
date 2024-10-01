@@ -87,10 +87,8 @@
             flex: 1;
             display: flex;
             min-height: 250px;
-            max-height: 250px;
             height: 250px;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             padding: 1rem;
             border: 1px solid $color-white;
@@ -108,7 +106,7 @@
             }
 
             .icon {
-              height: min-content;
+              height: max-content;
               font-size: 2rem;
             }
 
@@ -157,7 +155,6 @@
 
       .card-advantage {
         justify-content: center;
-        align-items: center;
 
         .icon {
           font-size: 2rem !important;
