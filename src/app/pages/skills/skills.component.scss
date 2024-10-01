@@ -108,6 +108,11 @@
             .icon {
               height: fit-content;
               font-size: 2rem;
+              height: fit-content;
+              min-height: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
             }
 
             h3 {
