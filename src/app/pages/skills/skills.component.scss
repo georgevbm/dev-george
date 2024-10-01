@@ -86,6 +86,7 @@
           .card-advantage {
             flex: 1;
             display: flex;
+            min-height: 250px;
             max-height: 250px;
             height: 250px;
             flex-direction: column;
