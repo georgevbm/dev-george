@@ -10,6 +10,7 @@
     "prettier": "npx prettier --write .",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
+    "commit": "git-cz",
     "prepare": "husky install"
   },
   "private": true,
@@ -39,6 +40,8 @@
     "@types/jest": "^29.5.12",
     "@types/jest-axe": "^3.5.9",
     "angular-eslint": "18.3.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
@@ -66,6 +69,11 @@
         "tsConfig": "<rootDir>/tsconfig.spec.json",
         "stringifyContentPathRegex": "\\.html$"
       }
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
