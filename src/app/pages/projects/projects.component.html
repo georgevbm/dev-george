@@ -4,8 +4,7 @@
 
     <p class="description-projects">
       Confira alguns dos meus principais projetos, desenvolvidos com foco em
-      qualidade, desempenho e inovação, utilizando tecnologias como Angular e
-      TypeScript.
+      qualidade, desempenho e inovação.
     </p>
 
     <p-carousel
@@ -13,19 +12,10 @@
       [numVisible]="1"
       [numScroll]="1"
       [showIndicators]="false">
-      <ng-template let-project pTemplate="item">
+      <ng-template let-project pTemplate="project">
         <div class="container-carousel">
-          <p>
-            {{ project.name }}
-          </p>
-
-          <p>
-            {{ project.description }}
-          </p>
-
-          <p>
-            {{ project.status }}
-          </p>
+          <app-project-presentation [project]="project">
+          </app-project-presentation>
         </div>
       </ng-template>
     </p-carousel>

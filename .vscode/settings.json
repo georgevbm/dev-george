@@ -18,5 +18,8 @@
       "source.organizeImports": "always"
     },
     "editor.formatOnSave": true
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
   }
 }

@@ -1,0 +1,60 @@
+<div class="project-presentation">
+  <section class="title-status">
+    <h2 class="title">{{ project.name }}</h2>
+    <span
+      class="status"
+      [ngClass]="
+        project.status === StatusProject.EM_CONSTRUCAO
+          ? 'in-progress'
+          : 'concluded'
+      ">
+      {{
+        project.status === StatusProject.EM_CONSTRUCAO
+          ? 'Em andamento'
+          : 'Concluído'
+      }}
+    </span>
+  </section>
+
+  <div class="container">
+    <div class="info">
+      <span class="description">{{ project.description }}</span>
+
+      <div class="technologies">
+        <span class="label-technologies"> Principais tecnologias: </span>
+
+        <div class="bullets-technologies">
+          @for (
+            technologie of project.coreTechnologies;
+            track technologie.name
+          ) {
+            <img
+              [ngSrc]="technologie.iconUrl"
+              [alt]="technologie.name"
+              [pTooltip]="technologie.name"
+              tooltipPosition="top"
+              width="50"
+              height="50" />
+          }
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button
+          class="button-default button-deploy"
+          (click)="redirectDeploy(project.urlDeploy)">
+          <ng-icon class="icon" name="bootstrapRocketTakeoffFill"></ng-icon>
+          Deploy
+        </button>
+
+        <button
+          class="button-default button-repository"
+          (click)="redirectRepository(project.urlRepository)">
+          <ng-icon class="icon" name="bootstrapGithub"></ng-icon>
+          Repositório
+        </button>
+      </div>
+    </div>
+    <div class="demo"></div>
+  </div>
+</div>

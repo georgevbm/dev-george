@@ -1,4 +1,4 @@
-export interface Projects {
+export interface Project {
   name: string;
   description: string;
   coreTechnologies: Technology[];
@@ -10,7 +10,7 @@ export interface Projects {
 
 export interface Technology {
   name: string;
-  icon: string;
+  iconUrl: string;
 }
 
 export enum StatusProject {

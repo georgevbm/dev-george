@@ -1,29 +1,50 @@
 import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
-import { Projects, StatusProject } from './types/projects.interface';
+import { ProjectPresentationComponent } from '../../shared/components/project-presentation/project-presentation.component';
+import { Project, StatusProject } from './types/projects.interface';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CarouselModule],
+  imports: [CarouselModule, ProjectPresentationComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  projects: Projects[] = [
+  projects: Project[] = [
     {
-      name: 'Projeto 1',
-      description: 'Esse é um projeto que esta sendo feito.',
+      name: 'Portal ASCEPA',
+      description:
+        'Este projeto visa desenvolver uma plataforma digital inclusiva que ofereça acessibilidade total para pessoas com deficiência visual.',
       coreTechnologies: [
         {
+          name: 'Angular',
+          iconUrl: 'image-skills/angular-logo.svg',
+        },
+        {
+          name: 'Nx',
+          iconUrl: 'image-skills/nx.png',
+        },
+        {
           name: 'SCSS',
-          icon: 'sass',
+          iconUrl:
+            'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg',
+        },
+        {
+          name: 'Git',
+          iconUrl:
+            'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+        },
+        {
+          name: 'JEST',
+          iconUrl:
+            'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg',
         },
       ],
       status: StatusProject.EM_CONSTRUCAO,
-      urlDeploy: 'url_deploy',
+      urlDeploy: 'https://portal-ascepa.vercel.app/home',
       urlPhoto: 'url_photo',
-      urlRepository: 'url_repo',
+      urlRepository: 'https://github.com/techexpertspro/portal-ascepa',
     },
     {
       name: 'Projeto 2',
@@ -31,7 +52,7 @@ export class ProjectsComponent {
       coreTechnologies: [
         {
           name: 'HTML',
-          icon: 'html',
+          iconUrl: 'html',
         },
       ],
       status: StatusProject.CONCLUIDO,
