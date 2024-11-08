@@ -10,6 +10,33 @@
   padding: 0.5rem;
 }
 
+::ng-deep .p-dialog {
+  max-width: 80%;
+  border: 1px solid $color-white;
+  border-radius: 0;
+
+  &-header {
+    padding: 0 1rem;
+    background-color: $color-black;
+
+    &-close {
+      color: $color-white;
+      margin-bottom: -5.8rem;
+      margin-right: 0.5rem;
+
+      &:hover {
+        background-color: $color-gray;
+        color: $color-black;
+      }
+    }
+  }
+
+  &-content {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
 .project-presentation {
   display: flex;
   flex-direction: column;
@@ -18,7 +45,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 0.5rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
 
     .title {
       margin: 0;

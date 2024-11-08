@@ -14,10 +14,19 @@
       [showIndicators]="false">
       <ng-template let-project pTemplate="project">
         <div class="container-carousel">
-          <app-project-presentation [project]="project">
-          </app-project-presentation>
+          <app-project-preview
+            [project]="project"
+            (clickMoreDetails)="selectProject($event)"></app-project-preview>
         </div>
       </ng-template>
     </p-carousel>
   </div>
 </div>
+
+<p-dialog
+  [modal]="true"
+  [(visible)]="showModalDetailsProject"
+  [style]="{ width: 'fit-content' }">
+  <app-project-presentation [project]="projectSelected">
+  </app-project-presentation>
+</p-dialog>

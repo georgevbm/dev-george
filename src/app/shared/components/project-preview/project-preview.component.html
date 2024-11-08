@@ -1,0 +1,27 @@
+<div class="project-preview">
+  <section class="title-status">
+    <h2 class="title">{{ project.name }}</h2>
+    <span
+      class="status"
+      [ngClass]="
+        project.status === StatusProject.EM_CONSTRUCAO
+          ? 'in-progress'
+          : 'concluded'
+      ">
+      {{
+        project.status === StatusProject.EM_CONSTRUCAO
+          ? 'Em andamento'
+          : 'Concluído'
+      }}
+    </span>
+  </section>
+
+  <div class="container">IMAGEM AQUI</div>
+
+  <button
+    class="button-default button-deploy"
+    (click)="clickMoreDetails.emit(project)">
+    <ng-icon class="icon" name="bootstrapPlusCircle"></ng-icon>
+    Ver detalhes
+  </button>
+</div>

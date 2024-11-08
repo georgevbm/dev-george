@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
+import { DialogModule } from 'primeng/dialog';
 import { ProjectPresentationComponent } from '../../shared/components/project-presentation/project-presentation.component';
+import { ProjectPreviewComponent } from '../../shared/components/project-preview/project-preview.component';
 import { Project, StatusProject } from './types/projects.interface';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CarouselModule, ProjectPresentationComponent],
+  imports: [
+    CarouselModule,
+    DialogModule,
+    ProjectPresentationComponent,
+    ProjectPreviewComponent,
+  ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
@@ -61,4 +68,12 @@ export class ProjectsComponent {
       urlRepository: 'url_repo',
     },
   ];
+
+  showModalDetailsProject = false;
+  projectSelected = this.projects[0];
+
+  selectProject(project: Project) {
+    this.projectSelected = project;
+    this.showModalDetailsProject = true;
+  }
 }

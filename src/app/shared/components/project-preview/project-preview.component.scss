@@ -1,0 +1,50 @@
+@import './../../../scss/tokens/colors/token';
+
+.project-preview {
+  display: flex;
+  flex-direction: column;
+
+  .title-status {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.5rem 0 1rem 0;
+
+    .title {
+      margin: 0;
+    }
+
+    .status {
+      padding: 0.2rem 0.5rem;
+      font-size: 0.75rem;
+      border-radius: 1rem;
+      margin-left: 1rem;
+
+      &.concluded {
+        background-color: $color-success;
+      }
+
+      &.in-progress {
+        background-color: $color-warning;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+
+    ng-icon {
+        overflow: visible;
+    }
+  }
+}

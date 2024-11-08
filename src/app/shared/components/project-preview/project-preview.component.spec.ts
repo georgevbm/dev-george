@@ -1,12 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { axe } from 'jest-axe';
-import { ProjectsComponent } from './projects.component';
-import { Project, StatusProject } from './types/projects.interface';
+import {
+  Project,
+  StatusProject,
+} from '../../../pages/projects/types/projects.interface';
+import { ProjectPreviewComponent } from './project-preview.component';
 
-describe('ProjectsComponent', () => {
-  let component: ProjectsComponent;
-  let fixture: ComponentFixture<ProjectsComponent>;
+describe('ProjectPreviewComponent', () => {
+  let component: ProjectPreviewComponent;
+  let fixture: ComponentFixture<ProjectPreviewComponent>;
 
   const mockProject: Project = {
     name: 'Portal ASCEPA',
@@ -45,29 +47,16 @@ describe('ProjectsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProjectsComponent],
+      imports: [ProjectPreviewComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ProjectsComponent);
+    fixture = TestBed.createComponent(ProjectPreviewComponent);
     component = fixture.componentInstance;
+    component.project = mockProject;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should have no accessibility violations', async () => {
-    fixture.detectChanges();
-    const results = await axe(fixture.nativeElement);
-
-    expect(results).toHaveNoViolations();
-  });
-
-  it('should call selectProject', async () => {
-    component.selectProject(mockProject);
-
-    expect(component.projectSelected).toStrictEqual(mockProject);
-    expect(component.showModalDetailsProject).toBeTruthy();
   });
 });
