@@ -13,7 +13,7 @@
 ::ng-deep .p-dialog {
   max-width: 80%;
   border: 1px solid $color-white;
-  border-radius: 0;
+  border-radius: 4px;
 
   &-header {
     padding: 0 1rem;
@@ -21,6 +21,7 @@
 
     &-close {
       color: $color-white;
+      background-color: $color-black;
       margin-bottom: -5.8rem;
       margin-right: 0.5rem;
 
@@ -34,6 +35,20 @@
   &-content {
     background-color: $color-black;
     color: $color-white;
+
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $color-gray;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-black;
+      border-radius: 1rem;
+      border: 1px solid $color-gray;
+    }
   }
 }
 
@@ -70,11 +85,19 @@
   .container {
     display: flex;
 
+    .demo {
+      flex: 1;
+      order: 2;
+      margin-bottom: 1rem;
+    }
+
     .info {
       flex: 1;
+      order: 1;
       display: flex;
       flex-direction: column;
-      margin-right: 0.5rem;
+      justify-content: center;
+      margin-right: 1rem;
 
       .description {
         font-size: 1rem;
@@ -119,16 +142,19 @@
         }
       }
     }
-
-    .demo {
-      flex: 1;
-      margin-left: 0.5rem;
-    }
   }
 }
 
 @media screen and (max-width: 1000px) {
   .container {
     flex-direction: column;
+
+    .demo {
+      order: 1 !important;
+    }
+
+    .info {
+      order: 2 !important;
+    }
   }
 }

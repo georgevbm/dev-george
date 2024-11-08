@@ -1,6 +1,10 @@
 @import './../../scss/tokens/typography/token';
 @import './../../scss/tokens/colors/token';
 
+::ng-deep body {
+  overflow: auto !important;
+}
+
 ::ng-deep .p-carousel-prev {
   margin: 0;
   width: fit-content;

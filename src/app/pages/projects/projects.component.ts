@@ -22,7 +22,7 @@ export class ProjectsComponent {
     {
       name: 'Portal ASCEPA',
       description:
-        'Este projeto visa desenvolver uma plataforma digital inclusiva que ofereça acessibilidade total para pessoas com deficiência visual.',
+        'Este projeto é uma parceria entre a ONG Associação de e para Cegos do Pará e TechExperts Pro para melhorar a presença online e a experiência do usuário, focando em fornecer uma plataforma abrangente para membros, associados e visitantes.',
       coreTechnologies: [
         {
           name: 'Angular',
@@ -50,7 +50,7 @@ export class ProjectsComponent {
       ],
       status: StatusProject.EM_CONSTRUCAO,
       urlDeploy: 'https://portal-ascepa.vercel.app/home',
-      urlPhoto: 'url_photo',
+      urlPhoto: 'GifAscepa.gif',
       urlRepository: 'https://github.com/techexpertspro/portal-ascepa',
     },
     {
