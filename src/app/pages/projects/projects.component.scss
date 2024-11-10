@@ -1,5 +1,7 @@
 @import './../../scss/tokens/typography/token';
 @import './../../scss/tokens/colors/token';
+@import './../../scss/tokens/generic/transition';
+
 
 ::ng-deep body {
   overflow: auto !important;
@@ -46,6 +48,11 @@
       color: $color-gray;
       font-weight: 200;
       margin-bottom: 2rem;
+      @include fadeInBottom(1s, 0s);
+    }
+
+    .description-projects {
+      @include fadeInBottom(1s, 0.2s);
     }
 
     .container-carousel {

@@ -1,4 +1,5 @@
 @import './../../../scss/tokens/colors/token';
+@import './../../../scss/tokens/generic/transition';
 
 .project-preview {
   display: flex;
@@ -9,6 +10,7 @@
     justify-content: flex-start;
     align-items: center;
     margin: 0.5rem 0 1rem 0;
+    @include fadeInBottom(1s, 0.4s);
 
     .title {
       margin: 0;
@@ -34,6 +36,7 @@
     display: flex;
     width: 100%;
     margin-bottom: 1rem;
+    @include fadeInBottom(1s, 0.6s);
   }
 
   button {
@@ -42,9 +45,10 @@
     align-items: center;
     width: 100%;
     gap: 0.5rem;
+    @include fadeInBottom(1s, 0.8s);
 
     ng-icon {
-        overflow: visible;
+      overflow: visible;
     }
   }
 }
