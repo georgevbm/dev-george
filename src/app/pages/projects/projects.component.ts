@@ -54,18 +54,38 @@ export class ProjectsComponent {
       urlRepository: 'https://github.com/techexpertspro/portal-ascepa',
     },
     {
-      name: 'Projeto 2',
-      description: 'Esse é um projeto que esta concluído.',
+      name: 'Portifólio Dev George',
+      description:
+        'Um portifólio para divulgação dos meus projetos pessoais e estudos.',
       coreTechnologies: [
         {
-          name: 'HTML',
-          iconUrl: 'html',
+          name: 'Angular',
+          iconUrl: 'image-skills/angular-logo.svg',
+        },
+        {
+          name: 'Typescript',
+          iconUrl: 'image-skills/typescript-logo.svg',
+        },
+        {
+          name: 'SCSS',
+          iconUrl:
+            'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg',
+        },
+        {
+          name: 'Git',
+          iconUrl:
+            'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+        },
+        {
+          name: 'JEST',
+          iconUrl:
+            'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg',
         },
       ],
-      status: StatusProject.CONCLUIDO,
-      urlDeploy: 'url_deploy',
-      urlPhoto: 'url_photo',
-      urlRepository: 'url_repo',
+      status: StatusProject.EM_CONSTRUCAO,
+      urlDeploy: 'https://dev-george.vercel.app/home',
+      urlPhoto: 'GifPortifolio.gif',
+      urlRepository: 'https://github.com/georgevbm/dev-george',
     },
   ];
 

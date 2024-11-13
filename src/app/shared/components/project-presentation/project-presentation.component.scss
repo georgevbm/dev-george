@@ -1,5 +1,7 @@
 @import './../../../scss/tokens/colors/token';
 @import './../../../scss/tokens/generic/transition';
+@import './../../../scss/tokens/typography/token';
+
 
 ::ng-deep .p-tooltip-arrow {
   border-top-color: $color-gray;
@@ -67,6 +69,7 @@
 
     .title {
       margin: 0;
+      font-family: $font-family;
     }
 
     .status {
@@ -74,6 +77,7 @@
       font-size: 0.75rem;
       border-radius: 1rem;
       margin-left: 1rem;
+      font-family: $font-family;
 
       &.concluded {
         background-color: $color-success;
@@ -107,12 +111,14 @@
       .description {
         font-size: 1rem;
         font-weight: 300;
+        font-family: $font-family;
         text-align: justify;
       }
 
       .label-technologies {
         font-size: 1rem;
         font-weight: 600;
+        font-family: $font-family;
       }
 
       .technologies {
