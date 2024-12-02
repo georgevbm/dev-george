@@ -3,7 +3,7 @@
 @import './../../../scss/tokens/typography/token';
 
 #footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
@@ -34,6 +34,11 @@
     .icon-email {
       font-size: $font-size-h3;
       overflow: visible;
+    }
+
+    span {
+      margin-left: 0.5rem;
+      margin-top: 5px;
     }
 
     &:hover {
