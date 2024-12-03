@@ -12,17 +12,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  margin-top: -48px;
+  padding: 0 1rem;
+  margin-top: 48px;
 
   .container-skills {
     width: 80%;
-    margin-bottom: 1rem;
 
     .title {
       font-size: $font-size-body-l;
       color: $color-gray;
       font-weight: 200;
+      margin-top: 0;
       margin-bottom: 2rem;
       @include fadeInBottom(1s, 0s);
     }

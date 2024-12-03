@@ -36,15 +36,19 @@
   justify-content: center;
   flex-direction: column;
   padding: 0 1rem;
-  margin-top: -48px;
 
   .container-contact {
     width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     .title {
       font-size: $font-size-body-l;
       color: $color-gray;
       font-weight: 200;
+      margin-top: 0;
       margin-bottom: 2rem;
       @include fadeInBottom(1s, 0s);
     }
