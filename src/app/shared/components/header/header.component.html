@@ -1,55 +1,27 @@
-<header id="navigation" [ngClass]="{ opened: opened }">
-  <section id="header">
-    <button
-      id="menu-button"
-      title="Botão abrir/fechar menu"
-      (click)="toggleMenu()">
-      <ng-icon
-        class="icon-close"
-        name="bootstrapX"
-        [ngClass]="{ 'icon-close-opened': opened }"></ng-icon>
-
-      <ng-icon
-        class="icon-menu"
-        name="bootstrapList"
-        [ngClass]="{ 'icon-menu-opened': opened }"></ng-icon>
-    </button>
-  </section>
-
-  <section id="menu" [ngClass]="{ opened: opened }">
+<nav id="navigation">
+  <section id="menu">
     <ul id="links">
       <li>
-        <a
-          tabindex="0"
-          (click)="redirectTo('home')"
-          (keyup.enter)="redirectTo('home')">
-          HOME
-        </a>
+        <app-button-menu textMenu="HOME"></app-button-menu>
       </li>
       <li>
-        <a
-          tabindex="0"
-          (click)="redirectTo('skills')"
-          (keyup.enter)="redirectTo('skills')">
-          HABILIDADES
-        </a>
+        <app-button-menu textMenu="HABILIDADES"></app-button-menu>
+      </li>
+
+      <li id="logo">
+        <img
+          src="dev-george.ico"
+          alt="Logo Dev George"
+          width="32"
+          height="32" />
+      </li>
+
+      <li>
+        <app-button-menu textMenu="PROJETOS"></app-button-menu>
       </li>
       <li>
-        <a
-          tabindex="0"
-          (click)="redirectTo('projects')"
-          (keyup.enter)="redirectTo('projects')">
-          PROJETOS
-        </a>
-      </li>
-      <li>
-        <a
-          tabindex="0"
-          (click)="redirectTo('contact')"
-          (keyup.enter)="redirectTo('contact')">
-          CONTATO
-        </a>
+        <app-button-menu textMenu="CONTATO"></app-button-menu>
       </li>
     </ul>
   </section>
-</header>
+</nav>

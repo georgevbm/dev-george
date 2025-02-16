@@ -1,0 +1,35 @@
+@import './../../../../../scss/tokens/colors/token';
+@import './../../../../../scss/tokens/typography/token';
+
+.button-menu {
+  font-family: $font-family;
+  font-size: $font-size-body-l;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: $color-white;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.button-menu::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: $color-white;
+  transition: 0.5s ease;
+}
+
+.button-menu:hover {
+  color: $color-white;
+  transition-delay: 0.5s;
+}
+
+.button-menu:hover::before {
+  width: 100%;
+}
