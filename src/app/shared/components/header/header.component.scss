@@ -7,14 +7,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  background-color: $color-black;
+  position: absolute;
+  background-color: transparent;
   z-index: 9;
   padding: 1rem;
 
   #menu {
     height: 100%;
-    background: $color-black;
+    background: transparent;
     z-index: 99;
     @include transitionMenu;
 
@@ -27,7 +27,7 @@
       padding: 0;
       gap: 0.5rem;
       list-style: none;
-      background: $color-black;
+      background: transparent;
 
       #logo {
         display: flex;
@@ -51,11 +51,6 @@
           color: $color-white;
           @include transition;
 
-          &:hover {
-            cursor: pointer;
-            color: $color-black;
-            background-color: $color-gray;
-          }
         }
       }
     }
