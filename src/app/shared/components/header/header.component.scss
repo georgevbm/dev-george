@@ -9,7 +9,7 @@
   justify-content: center;
   position: absolute;
   background-color: transparent;
-  z-index: 9;
+  z-index: 999;
   padding: 1rem;
 
   #menu {
@@ -50,9 +50,16 @@
           padding: 0.5rem 1rem;
           color: $color-white;
           @include transition;
-
         }
       }
     }
   }
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
 }

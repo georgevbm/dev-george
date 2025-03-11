@@ -1,4 +1,4 @@
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { bootstrapPlusCircle } from '@ng-icons/bootstrap-icons';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
@@ -11,7 +11,7 @@ import {
 @Component({
   selector: 'app-project-preview',
   standalone: true,
-  imports: [CommonModule, ButtonModule, NgOptimizedImage, NgIconComponent],
+  imports: [CommonModule, ButtonModule, NgIconComponent],
   templateUrl: './project-preview.component.html',
   styleUrl: './project-preview.component.scss',
   viewProviders: [

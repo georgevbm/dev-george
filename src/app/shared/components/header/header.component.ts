@@ -3,12 +3,11 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { bootstrapList, bootstrapX } from '@ng-icons/bootstrap-icons';
 import { provideIcons } from '@ng-icons/core';
-import { ButtonMenuComponent } from './components/button-menu/button-menu.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, ButtonMenuComponent],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   viewProviders: [provideIcons({ bootstrapList, bootstrapX })],
