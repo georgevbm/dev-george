@@ -52,10 +52,6 @@
       @include fadeInBottom(1s, 0s);
     }
 
-    .description-projects {
-      @include fadeInBottom(1s, 0.2s);
-    }
-
     .container-carousel {
       font-family: $font-family;
     }

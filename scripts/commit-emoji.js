@@ -1,5 +1,15 @@
 const fs = require('fs');
 
+// Verifica se é um commit --amend verificando o arquivo .git/COMMIT_EDITMSG
+const isAmendCommit = () => {
+  try {
+    const gitHeadPath = '.git/COMMIT_EDITMSG';
+    return fs.existsSync(gitHeadPath) && fs.readFileSync(gitHeadPath, 'utf8').length > 0;
+  } catch (error) {
+    return false;
+  }
+};
+
 // Mapeamento dos tipos de commit para emojis Gitmoji
 const emojiMap = {
   feat: '✨', // Adicionando uma nova funcionalidade
@@ -25,6 +35,11 @@ if (!commitMessageFile) {
 
 // Leia a mensagem de commit
 let commitMessage = fs.readFileSync(commitMessageFile, 'utf8').trim();
+
+// Se for um commit --amend, não aplica as regras
+if (isAmendCommit()) {
+  process.exit(0);
+}
 
 // Verifique o tipo do commit (ex: "fix", "feat") e associe o emoji
 const typeMatch = commitMessage.match(
