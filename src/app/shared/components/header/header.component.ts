@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { bootstrapList, bootstrapX } from '@ng-icons/bootstrap-icons';
-import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { provideIcons } from '@ng-icons/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, NgIconComponent],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   viewProviders: [provideIcons({ bootstrapList, bootstrapX })],

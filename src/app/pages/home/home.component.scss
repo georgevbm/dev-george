@@ -4,11 +4,12 @@
 
 .home {
   width: 100%;
-  height: 100%;
+  height: 100dvh;
+  position: sticky;
+  z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
 
   .container-home {
     width: 80%;

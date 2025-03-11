@@ -1,55 +1,27 @@
-<header id="navigation" [ngClass]="{ opened: opened }">
-  <section id="header">
-    <button
-      id="menu-button"
-      title="Botão abrir/fechar menu"
-      (click)="toggleMenu()">
-      <ng-icon
-        class="icon-close"
-        name="bootstrapX"
-        [ngClass]="{ 'icon-close-opened': opened }"></ng-icon>
-
-      <ng-icon
-        class="icon-menu"
-        name="bootstrapList"
-        [ngClass]="{ 'icon-menu-opened': opened }"></ng-icon>
-    </button>
-  </section>
-
-  <section id="menu" [ngClass]="{ opened: opened }">
+<nav id="navigation">
+  <section id="menu">
     <ul id="links">
-      <li>
-        <a
-          tabindex="0"
-          (click)="redirectTo('home')"
-          (keyup.enter)="redirectTo('home')">
-          HOME
-        </a>
+      <li class="animate__animated animate__fadeInRight animate__delay-2s">
+        <a href="#home" class="nav-link">HOME</a>
       </li>
-      <li>
-        <a
-          tabindex="0"
-          (click)="redirectTo('skills')"
-          (keyup.enter)="redirectTo('skills')">
-          HABILIDADES
-        </a>
+      <li class="animate__animated animate__fadeInRight animate__delay-1s">
+        <a href="#skills" class="nav-link">HABILIDADES</a>
       </li>
-      <li>
-        <a
-          tabindex="0"
-          (click)="redirectTo('projects')"
-          (keyup.enter)="redirectTo('projects')">
-          PROJETOS
-        </a>
+
+      <li id="logo" class="animate__animated animate__fadeInDown">
+        <img
+          src="dev-george.ico"
+          alt="Logo Dev George"
+          width="32"
+          height="32" />
       </li>
-      <li>
-        <a
-          tabindex="0"
-          (click)="redirectTo('contact')"
-          (keyup.enter)="redirectTo('contact')">
-          CONTATO
-        </a>
+
+      <li class="animate__animated animate__fadeInLeft animate__delay-1s">
+        <a href="#projects" class="nav-link">PROJETOS</a>
+      </li>
+      <li class="animate__animated animate__fadeInLeft animate__delay-2s">
+        <a href="#contact" class="nav-link">CONTATO</a>
       </li>
     </ul>
   </section>
-</header>
+</nav>

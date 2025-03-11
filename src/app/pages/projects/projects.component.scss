@@ -33,12 +33,12 @@
 
 .projects {
   width: 100%;
-  height: 100%;
+  height: 100dvh;
+  position: sticky;
+  z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem;
-  margin-top: 48px;
 
   .container-projects {
     width: 80%;
@@ -50,10 +50,6 @@
       margin-top: 0;
       margin-bottom: 2rem;
       @include fadeInBottom(1s, 0s);
-    }
-
-    .description-projects {
-      @include fadeInBottom(1s, 0.2s);
     }
 
     .container-carousel {
